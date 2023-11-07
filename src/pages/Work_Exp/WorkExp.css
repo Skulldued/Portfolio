@@ -1,0 +1,19 @@
+.work-experience {
+  margin-left: 150px;
+  margin-top: 100px;
+  background-color: darkcyan;
+  margin-bottom: 100px;
+}
+
+.work {
+  padding-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .work-experience {
+    margin-left: 0px;
+    margin-top: 50px;
+
+    margin-bottom: 30px;
+  }
+}

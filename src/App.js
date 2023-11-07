@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout/Layout";
+import About from "./pages/About/About";
+import Education from "./pages/Education/Education";
+import Projects from "./pages/Projects/Projects";
+import Tech from "./pages/Tech Stack/Tech";
+import WorkExp from "./pages/Work_Exp/WorkExp";
+import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "react-scroll-to-top";
+import { useTheme } from "./context/ThemeContext";
+import "./App.css";
+import Responsive from "./components/ResponsiveNav/Responsive";
 
 function App() {
+  const [theme] = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id={theme}>
+        <Responsive />
+        <Layout />
+        <div className="container text-center pt-3 ">
+          <About />
+          <Tech />
+          <Projects />
+          <Education />
+          <WorkExp />
+          <Contact />
+        </div>
+
+        <ScrollToTop smooth className="scroll-icon" />
+        <div className="footer text-center">
+          <p className="text-uppercase">copyRight &copy; 2023 portfolio</p>
+        </div>
+      </div>
+    </>
   );
 }
 

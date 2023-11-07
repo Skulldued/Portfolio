@@ -1,0 +1,10 @@
+.education-tittle {
+  background-color: aliceblue;
+  margin-left: 150px;
+}
+
+@media (max-width: 600px) {
+  .education-tittle {
+    margin-left: 0px;
+  }
+}
